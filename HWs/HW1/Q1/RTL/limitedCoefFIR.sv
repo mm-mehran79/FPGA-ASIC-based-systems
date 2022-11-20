@@ -24,9 +24,9 @@ module fir_filter
 )
 //----------------------------------------------- Reg Declaration
     reg signed [INPUT_LENTGH-1:0]x_n[0:TAP_NUMBER-1];                                           //registered input
-    reg signed [1:0]coef[0:TAP_NUMBER-1];                                           //coefficients
-    reg signed [INPUT_LENTGH + 1:0]xb[0:TAP_NUMBER-1];                            //multiplied registered input
-    reg signed [$clog2(TAP_NUMBER) + INPUT_LENTGH + 1:0]sum[1:TAP_NUMBER-1];      //adders output
+    reg signed [1:0]coef[0:TAP_NUMBER-1];                                                       //coefficients
+    reg signed [INPUT_LENTGH + 1:0]xb[0:TAP_NUMBER-1];                                          //multiplied registered input
+    reg signed [$clog2(TAP_NUMBER) + INPUT_LENTGH + 1:0]sum[1:TAP_NUMBER-1];                    //adders output
 //----------------------------------------------- sequential Logic
     always @(posedge clk ) begin
         x_n[0] <= In;                                                                           //flop in
